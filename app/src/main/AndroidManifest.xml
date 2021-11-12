@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".Ver_registro_reservas_admin_act"
+            android:exported="false" />
+        <activity
+            android:name=".Registro_usuario_act"
+            android:exported="false" />
+        <activity
             android:name=".menu_principal_act"
             android:exported="true" />
         <activity
