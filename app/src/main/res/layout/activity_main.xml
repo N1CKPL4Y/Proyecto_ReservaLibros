@@ -72,7 +72,6 @@
                 android:layout_width="144dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="28dp"
-                android:onClick="ingresar"
                 android:text="Iniciar Sesion"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.494"

@@ -48,15 +48,15 @@ public class MainActivity extends AppCompatActivity {
                 Usuario user = d.getUser(nombre, pass);
                 if (user != null) {
                     if (user.getTipo_user()==1){
-                        System.out.println(""+user.getID());
-                        id_user = user.getID();
+                        System.out.println(""+user.getTipo_user());
+                        id_user = user.getTipo_user();
                         Intent i = new Intent(getApplicationContext(), menu_admi_act.class);
-                        i.putExtra("usuario", id_user);
+                        i.putExtra("tipo", id_user);
                         i.putExtra("nombre", user.getNombre());
                         startActivity(i);
                     }else if(user.getTipo_user()==2){
-                        System.out.println(""+user.getID());
-                        id_user = user.getID();
+                        System.out.println(""+user.getTipo_user());
+                        id_user = user.getTipo_user();
                         Intent i = new Intent(getApplicationContext(), menu_principal_act.class);
                         i.putExtra("usuario", id_user);
                         i.putExtra("nombre", user.getNombre());

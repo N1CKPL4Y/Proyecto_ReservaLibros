@@ -19,10 +19,10 @@ public class menu_admi_act extends AppCompatActivity {
         txtuserlog = (TextView) findViewById(R.id.txtuserlog);
         Intent i = getIntent();
         String nombre = i.getStringExtra("nombre");
-        int id = getIntent().getIntExtra("usuario",1);
+        int id = getIntent().getIntExtra("tipo",1);
         //int id_1 = Integer.parseInt(id);
         System.out.println("variable recibida: "+id);
-        txtuserlog.setText(nombre);
+        txtuserlog.setText("Bienvenido: "+nombre);
 
     }
 
