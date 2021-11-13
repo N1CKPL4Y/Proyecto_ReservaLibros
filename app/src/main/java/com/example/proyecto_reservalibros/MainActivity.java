@@ -25,6 +25,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void registrar(View view){
+
+        Intent registrar = new Intent(this, Registro_usuario_act.class);
+        startActivity(registrar);
+
+
+    }
+
 
 
 

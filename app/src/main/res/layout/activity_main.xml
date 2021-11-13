@@ -91,6 +91,7 @@
                 android:layout_width="180dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="4dp"
+                android:onClick="registrar"
                 android:text="Registrarse"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
