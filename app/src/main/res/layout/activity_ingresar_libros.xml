@@ -69,7 +69,7 @@
                 tools:ignore="TouchTargetSizeCheck" />
 
             <Spinner
-                android:id="@+id/spinner"
+                android:id="@+id/spn_catg"
                 android:layout_width="289dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="12dp"
@@ -100,7 +100,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spinner" />
+                app:layout_constraintTop_toBottomOf="@+id/spn_catg" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
