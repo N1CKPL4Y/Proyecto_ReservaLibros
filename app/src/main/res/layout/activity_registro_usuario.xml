@@ -50,7 +50,7 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/txtuserR"
+                android:id="@+id/txtUserR"
                 android:layout_width="282dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="4dp"
@@ -63,7 +63,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/txtuserR2"
+                android:id="@+id/txtApellido"
                 android:layout_width="282dp"
                 android:layout_height="48dp"
                 android:ems="10"
@@ -72,10 +72,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.515"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtuserR" />
+                app:layout_constraintTop_toBottomOf="@+id/txtUserR" />
 
             <EditText
-                android:id="@+id/editTextTextPassword"
+                android:id="@+id/txtpassR"
                 android:layout_width="280dp"
                 android:layout_height="47dp"
                 android:ems="10"
@@ -84,32 +84,20 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtuserR2"
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <EditText
-                android:id="@+id/editTextTextPassword2"
-                android:layout_width="280dp"
-                android:layout_height="47dp"
-                android:ems="10"
-                android:hint="Confirme Contraseña"
-                android:inputType="textPassword"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.485"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+                app:layout_constraintTop_toBottomOf="@+id/txtApellido"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btnRegistrar"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="24dp"
                 android:text="Registrar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+                app:layout_constraintTop_toBottomOf="@+id/txtpassR" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 

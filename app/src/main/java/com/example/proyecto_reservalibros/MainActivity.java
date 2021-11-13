@@ -3,6 +3,7 @@ package com.example.proyecto_reservalibros;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -63,9 +64,7 @@ public class MainActivity extends AppCompatActivity {
                         i.putExtra("nombre", user.getNombre());
                         startActivity(i);
                         System.out.println(id_user);
-
                     }
-
                 }else{
                     txterror.setText("Usuario y/o contraseña incorrectos, reintente");
                     txtuser.setText("");
@@ -80,6 +79,26 @@ public class MainActivity extends AppCompatActivity {
         Intent registrar = new Intent(this, Registro_usuario_act.class);
         startActivity(registrar);
 
+
+    }
+
+    public void facebook(View view){
+        Uri webpage = Uri.parse("https://www.facebook.com");
+        Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
+        startActivity(webIntent);
+    }
+
+    public void twitter(View view){
+        Uri webpage = Uri.parse("https://www.twitter.com");
+        Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
+        startActivity(webIntent);
+
+    }
+
+    public void instagram(View view){
+        Uri webpage = Uri.parse("https://www.instagram.com");
+        Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
+        startActivity(webIntent);
 
     }
 

@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-import com.example.proyecto_reservalibros.Clases.Categoria;
 import com.example.proyecto_reservalibros.Clases.Usuario;
 
 public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
@@ -80,22 +79,4 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
         }
         bd.close();
     }
-
-
-    //insertar categoria : jose
-
-    public void añadirCAt (Categoria cat){
-        SQLiteDatabase bd = getReadableDatabase();
-
-        if (bd != null){
-            bd.execSQL("INSERT INTO Categoria VALUES(NULL, "+ cat.getNombre_c()+"');");
-        }
-        bd.close();
-
-
-    }
-
-
-
-
 }

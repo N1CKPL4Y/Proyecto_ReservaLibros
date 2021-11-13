@@ -106,21 +106,27 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/facebook" />
+                    android:onClick="facebook"
+                    app:srcCompat="@drawable/facebook"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
                 <ImageView
                     android:id="@+id/imageView14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/twitter" />
+                    android:onClick="twitter"
+                    app:srcCompat="@drawable/twitter"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
                 <ImageView
                     android:id="@+id/imageView13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/instagram" />
+                    android:onClick="instagram"
+                    app:srcCompat="@drawable/instagram"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
             </LinearLayout>
 
             <TextView
