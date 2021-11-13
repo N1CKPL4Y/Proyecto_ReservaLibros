@@ -9,14 +9,14 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView4"
-        android:layout_width="366dp"
-        android:layout_height="148dp"
-        app:cardCornerRadius="10dp"
+        android:layout_width="282dp"
+        android:layout_height="113dp"
         android:layout_marginTop="36dp"
+        app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView3"
@@ -27,8 +27,8 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="366dp"
-        android:layout_height="397dp"
+        android:layout_width="319dp"
+        android:layout_height="323dp"
         android:layout_marginTop="60dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,8 +41,8 @@
 
             <EditText
                 android:id="@+id/text_nombreLibro"
-                android:layout_width="344dp"
-                android:layout_height="53dp"
+                android:layout_width="286dp"
+                android:layout_height="45dp"
                 android:layout_marginTop="40dp"
                 android:ems="10"
                 android:hint="Nombre del Libro"
@@ -56,8 +56,8 @@
 
             <EditText
                 android:id="@+id/text_cantPaginas"
-                android:layout_width="344dp"
-                android:layout_height="53dp"
+                android:layout_width="293dp"
+                android:layout_height="39dp"
                 android:layout_marginTop="24dp"
                 android:ems="10"
                 android:hint="Cantidad de Paginas"
@@ -70,8 +70,8 @@
 
             <Spinner
                 android:id="@+id/spinner"
-                android:layout_width="344dp"
-                android:layout_height="52dp"
+                android:layout_width="289dp"
+                android:layout_height="48dp"
                 android:layout_marginTop="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.454"
@@ -81,8 +81,8 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="257dp"
-                android:layout_height="28dp"
+                android:layout_width="238dp"
+                android:layout_height="19dp"
                 android:layout_marginTop="20dp"
                 android:text="Seleccione una Categoria:"
                 android:textSize="16sp"
@@ -95,9 +95,10 @@
                 android:id="@+id/btn_añadir"
                 android:layout_width="146dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="12dp"
                 android:text="Añadir"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
