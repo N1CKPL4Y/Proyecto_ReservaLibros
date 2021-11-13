@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".registro_reservasAdmi_act"
+            android:exported="true" />
+        <activity
+            android:name=".ingresarCategoria_act"
+            android:exported="true" />
+        <activity
+            android:name=".modificar_libro_act"
+            android:exported="true" />
+        <activity
+            android:name=".ingresarLibros_act"
+            android:exported="true" />
+        <activity
             android:name=".menu_admi_act"
             android:exported="true" />
         <activity

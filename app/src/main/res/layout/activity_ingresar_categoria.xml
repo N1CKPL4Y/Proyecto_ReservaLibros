@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".ingresarCategoria_act">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView6"
+        android:layout_width="374dp"
+        android:layout_height="147dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="147dp"
+            android:layout_height="59dp"
+            android:text="logo"
+            android:textSize="20sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="376dp"
+        android:layout_height="186dp"
+        android:layout_marginTop="60dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView6">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="187dp">
+
+            <EditText
+                android:id="@+id/editTextTextPersonName2"
+                android:layout_width="329dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="36dp"
+                android:ems="10"
+                android:hint="Nombre de la Categoria"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.51"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="136dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="36dp"
+                android:text="Añadir"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
