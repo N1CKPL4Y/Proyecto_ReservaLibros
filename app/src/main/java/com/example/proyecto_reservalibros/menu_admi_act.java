@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 public class menu_admi_act extends AppCompatActivity {
     private TextView txtuserlog;
 
@@ -50,7 +48,7 @@ public class menu_admi_act extends AppCompatActivity {
 
     public void verRegistro (View view){
 
-        Intent verRegistro = new Intent(this, registro_reservasAdmi_act.class);
+        Intent verRegistro = new Intent(this, ver_registro_reservasAdmi_act.class);
         startActivity(verRegistro);
     }
 

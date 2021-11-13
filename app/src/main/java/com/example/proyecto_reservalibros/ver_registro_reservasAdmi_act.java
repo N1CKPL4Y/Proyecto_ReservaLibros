@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class registro_reservasAdmi_act extends AppCompatActivity {
+public class ver_registro_reservasAdmi_act extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro_reservas_admi);
+        setContentView(R.layout.activity_ver_registro_reservas_admi);
     }
 }

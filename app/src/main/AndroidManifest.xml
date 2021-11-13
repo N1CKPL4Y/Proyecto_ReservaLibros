@@ -10,7 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".registro_reservasAdmi_act"
+            android:name=".historial_reservas_act"
+            android:exported="false" />
+        <activity
+            android:name=".realizar_reserva_act"
+            android:exported="false" />
+        <activity
+            android:name=".buscar_libro_act"
+            android:exported="false" />
+        <activity
+            android:name=".ver_registro_reservasAdmi_act"
             android:exported="true" />
         <activity
             android:name=".ingresarCategoria_act"

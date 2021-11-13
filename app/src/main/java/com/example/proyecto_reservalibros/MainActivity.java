@@ -65,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
 
                     }
 
+                }else{
+                    txterror.setText("Usuario y/o contraseña incorrectos, reintente");
+                    txtuser.setText("");
+                    txtpass.setText("");
                 }
             }
         });
