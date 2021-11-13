@@ -5,13 +5,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class menu_admi_act extends AppCompatActivity {
+    private TextView txtuserlog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_admi);
+        txtuserlog = (TextView) findViewById(R.id.txtuserlog);
+        Intent i = getIntent();
+        String nombre = i.getStringExtra("nombre");
+        int id = getIntent().getIntExtra("usuario",1);
+        //int id_1 = Integer.parseInt(id);
+        System.out.println("variable recibida: "+id);
+        txtuserlog.setText(nombre);
+
     }
 
     //inicio de intent botones

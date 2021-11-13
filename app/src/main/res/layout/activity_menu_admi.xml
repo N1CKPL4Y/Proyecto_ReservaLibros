@@ -34,8 +34,8 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="306dp"
-        android:layout_height="333dp"
+        android:layout_width="304dp"
+        android:layout_height="339dp"
         android:layout_marginTop="60dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,10 +50,11 @@
                 android:id="@+id/btn_ingresarLibro"
                 android:layout_width="181dp"
                 android:layout_height="49dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="28dp"
                 android:onClick="insertar"
                 android:text="Ingresar Libros"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -105,6 +106,15 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_verRegistro"
                 tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/txtuserlog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
