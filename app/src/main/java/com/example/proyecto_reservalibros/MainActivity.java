@@ -2,7 +2,9 @@ package com.example.proyecto_reservalibros;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +16,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // lo agregue solo para probar si funcionaban los intent de admi uwu
+    public void ingresar(View view){
+
+        Intent ingresar = new Intent(this, menu_admi_act.class);
+        startActivity(ingresar);
+
+
+    }
 
 
 

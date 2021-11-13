@@ -25,9 +25,6 @@
             android:name=".menu_admi_act"
             android:exported="true" />
         <activity
-            android:name=".Ver_registro_reservas_admin_act"
-            android:exported="false" />
-        <activity
             android:name=".Registro_usuario_act"
             android:exported="false" />
         <activity
