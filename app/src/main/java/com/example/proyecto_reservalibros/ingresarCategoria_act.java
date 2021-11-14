@@ -28,7 +28,7 @@ public class ingresarCategoria_act extends AppCompatActivity {
         //jose
 
         text_nombre_c = (EditText) findViewById(R.id.text_nombre_c);
-        btn_añadir = (Button) findViewById(R.id.btn_añadir);
+        btn_añadir = (Button) findViewById(R.id.btn_agregar);
 
 
         d = new AdminSQLiteOpenHelper(getApplicationContext());

@@ -23,7 +23,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
     private static final String INSERT_TIPO_USUARIO = "INSERT INTO Tipo_usuario VALUES(1, 'Administrador'),(2, 'Cliente');";
     private static final String TABLA_USUARIO = "CREATE TABLE Usuario(id INTEGER primary key autoincrement, nombre TEXT, apellido TEXT, passwd TEXT,tipo_usuario_fk INTEGER, foreign key(tipo_usuario_fk) references Tipo_usuario(id))";
     private static final String INSERT_USUARIO = "INSERT INTO Usuario VALUES(null, 'admin', 'admin', 'admin123', 1), (null, 'Nicolas', 'Perez', 'nico123', 2), (null, 'Jose', 'Pino', 'jose123', 2)";
-    private static final String TABLA_CATEGORIA = "CREATE TABLE categoria_libro(id INTEGER primary key autoincrement,nombre_c TEXT)";
+    private static final String TABLA_CATEGORIA = "CREATE TABLE Categoria_libro(id INTEGER primary key autoincrement,nombre_c TEXT)";
     private static final String INSERT_CATEGORIA = "INSERT INTO Categoria_libro VALUES(null, 'suspenso'), (null, 'accion'), (null, 'romance')";
     private static final String TABLA_LIBRO = "CREATE TABLE Libro(id INTEGER primary key autoincrement, nombre TEXT,cantidad_paginas INTEGER, categoria_id_fk INTEGER, foreign key(categoria_id_fk) references Categoria(id))";
     private static final String INSERT_LIBRO = "INSERT INTO Libro VALUES(null, 'IT(eso)', 400, 1), (null, 'El prisionero de zenda', 300, 2), (null, 'Francisca yo te amo', 200, 3)";
@@ -129,7 +129,16 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
         return l;
     }
 
-    //buscamos todas las categorias existentes
+    //agregar libro
+    public void insertLibro(Libro l){
+        SQLiteDatabase bd = getReadableDatabase();
+        if (bd !=null){
+            bd.execSQL("INSERT INTO Libro VALUES(NULL, '"+l.getNombre_l()+"', '"+l.getCant_Paginas()+"', '"+l.getCategoria_l());
+        }
+        bd.close();
+
+    }
+
 
 
 

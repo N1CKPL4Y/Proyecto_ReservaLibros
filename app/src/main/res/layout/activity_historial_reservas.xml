@@ -4,6 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".historial_reservas_act">
+    tools:context=".historial_reservas_act"
+    android:background="@drawable/gradient_background">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView10"
+        android:layout_width="333dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="28dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="353dp"
+        android:layout_height="297dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView10" />
 </androidx.constraintlayout.widget.ConstraintLayout>
