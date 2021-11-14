@@ -27,4 +27,8 @@ public class Categoria {
     public void setNombre_c(String nombre_c) {
         Nombre_c = nombre_c;
     }
+
+    public String toString(){
+        return Nombre_c;
+    }
 }

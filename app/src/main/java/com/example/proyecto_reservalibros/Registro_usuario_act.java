@@ -48,6 +48,9 @@ public class Registro_usuario_act extends AppCompatActivity {
                 txtUserR.setText("");
                 txtApellido.setText("");
                 txtPassR.setText("");
+                Intent ointent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(ointent);
+                finish();
             }
         });
     }

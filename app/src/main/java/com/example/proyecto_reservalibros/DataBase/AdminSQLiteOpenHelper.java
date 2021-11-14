@@ -91,7 +91,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
     public void insertCategoria(Categoria cat){
         SQLiteDatabase bd = getReadableDatabase();
         if (bd !=null){
-            bd.execSQL("INSERT INTO Categoria VALUES(NULL, '"+cat.getNombre_c());
+            bd.execSQL("INSERT INTO Categoria_libro VALUES(NULL, '"+cat.getNombre_c()+"');");
         }
         bd.close();
     }
@@ -118,7 +118,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
     public Libro getLibro(String nombre){
         Libro l = null;
         SQLiteDatabase bd = getReadableDatabase();
-        Cursor cur = bd.rawQuery("SELECT * FROM Libro WHERE nombre = '"+nombre, null);
+        Cursor cur = bd.rawQuery("SELECT * FROM Libro WHERE nombre = '"+nombre+"'", null);
         if (cur.moveToFirst()){
             l = new Libro();
             l.setID(cur.getInt(0));
@@ -127,6 +127,21 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
             l.setCategoria_l(cur.getInt(3));
         }
         return l;
+    }
+
+    public boolean getlibro(String nombre){
+        Libro l = null;
+        SQLiteDatabase bd = getReadableDatabase();
+        Cursor cur = bd.rawQuery("SELECT * FROM Libro WHERE nombre = '"+nombre+"'", null);
+        if (cur.moveToFirst()){
+            l = new Libro();
+            l.setID(cur.getInt(0));
+            l.setNombre_l(cur.getString(1));
+            l.setCant_Paginas(cur.getInt(2));
+            l.setCategoria_l(cur.getInt(3));
+            return true;
+        }
+        return false;
     }
 
     //agregar libro

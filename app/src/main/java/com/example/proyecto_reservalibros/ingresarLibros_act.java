@@ -6,11 +6,14 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.AndroidException;
+import android.util.SparseIntArray;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.proyecto_reservalibros.Clases.Categoria;
 import com.example.proyecto_reservalibros.DataBase.AdminSQLiteOpenHelper;
@@ -38,6 +41,7 @@ public class ingresarLibros_act extends AppCompatActivity {
         text_cantPaginas = (EditText) findViewById(R.id.text_cantPaginas);
         spn_catg = (Spinner) findViewById(R.id.spn_catg);
         btn_agregar = (Button) findViewById(R.id.btn_agregar);
+
         d = new AdminSQLiteOpenHelper(getApplicationContext());
         consultarlistaCategoria();
         obtenerLista();
@@ -52,6 +56,11 @@ public class ingresarLibros_act extends AppCompatActivity {
         btn_agregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String nombre;
+                int c_paginas, categoria;
+                nombre = text_nombreLibro.getText().toString();
+                c_paginas = Integer.parseInt(text_cantPaginas.getText().toString());
+                categoria = spn_catg.getSelectedItemPosition();
 
             }
         });

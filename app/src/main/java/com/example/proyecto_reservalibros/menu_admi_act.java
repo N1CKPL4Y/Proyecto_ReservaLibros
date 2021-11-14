@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 public class menu_admi_act extends AppCompatActivity {
     private TextView txtuserlog;
+    private String nombre_usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,11 +17,11 @@ public class menu_admi_act extends AppCompatActivity {
         setContentView(R.layout.activity_menu_admi);
         txtuserlog = (TextView) findViewById(R.id.txtuserlog);
         Intent i = getIntent();
-        String nombre = i.getStringExtra("nombre");
+        nombre_usuario = i.getStringExtra("nombre");
         int id = getIntent().getIntExtra("tipo",1);
         //int id_1 = Integer.parseInt(id);
         System.out.println("variable recibida: "+id);
-        txtuserlog.setText("Bienvenido: "+nombre);
+        txtuserlog.setText("Bienvenido: "+nombre_usuario);
 
     }
 

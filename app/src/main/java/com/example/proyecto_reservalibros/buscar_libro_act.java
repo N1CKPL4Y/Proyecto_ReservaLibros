@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.proyecto_reservalibros.Clases.Libro;
 import com.example.proyecto_reservalibros.DataBase.AdminSQLiteOpenHelper;
@@ -34,7 +35,7 @@ public class buscar_libro_act<Scrollview> extends AppCompatActivity {
         txtBuscarLibro = (EditText) findViewById(R.id.txtBuscarLibro);
         listarDatos();
 
-        init();
+        buscar();
     }
 
     public void volver(View view){
@@ -54,10 +55,29 @@ public class buscar_libro_act<Scrollview> extends AppCompatActivity {
 
     }
 
-    private void init(){
+    private void buscar(){
         btnBuscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String nombre = txtBuscarLibro.getText().toString();
+                System.out.println(nombre);
+                if(nombre.isEmpty()){
+                    listarDatos();
+                }else if (!nombre.isEmpty()){
+                    Libro oLibro = d.getLibro(nombre);
+                    boolean exist = d.getlibro(nombre);
+                    ArrayList <Libro> list = new ArrayList<>();
+                    list.add(oLibro);
+                    if (!list.isEmpty() && exist==true){
+                        lista_libros.setVisibility(View.VISIBLE);
+                        ArrayAdapter <Libro> adaptador = new ArrayAdapter<Libro>(getApplicationContext(), android.R.layout.simple_list_item_1, list);
+                        lista_libros.setAdapter(adaptador);
+                    }else if (exist==false){
+                        listarDatos();
+                        Toast.makeText(getApplicationContext(), "Libro no encontrado uwu", Toast.LENGTH_LONG).show();
+                    }
+                }
+
 
             }
         });
