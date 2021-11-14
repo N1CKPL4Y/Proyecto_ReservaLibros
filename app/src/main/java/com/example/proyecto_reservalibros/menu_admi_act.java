@@ -7,21 +7,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.proyecto_reservalibros.Clases.Usuario;
+
 public class menu_admi_act extends AppCompatActivity {
     private TextView txtuserlog;
     private String nombre_usuario;
+    private Bundle b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_admi);
         txtuserlog = (TextView) findViewById(R.id.txtuserlog);
-        Intent i = getIntent();
-        nombre_usuario = i.getStringExtra("nombre");
-        int id = getIntent().getIntExtra("tipo",1);
-        //int id_1 = Integer.parseInt(id);
-        System.out.println("variable recibida: "+id);
-        txtuserlog.setText("Bienvenido: "+nombre_usuario);
+        b = getIntent().getExtras();
+        Usuario usuario = (Usuario) b.getSerializable("usuario");
+        txtuserlog.setText("Bienvenido: "+usuario.getNombre());
 
     }
 

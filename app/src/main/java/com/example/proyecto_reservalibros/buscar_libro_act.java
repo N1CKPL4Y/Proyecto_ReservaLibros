@@ -24,6 +24,7 @@ public class buscar_libro_act<Scrollview> extends AppCompatActivity {
     private Button btnBuscar;
     private EditText txtBuscarLibro;
     ArrayAdapter<String> adaptador;
+    private Bundle b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

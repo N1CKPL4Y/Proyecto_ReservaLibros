@@ -27,7 +27,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
     private static final String INSERT_CATEGORIA = "INSERT INTO Categoria_libro VALUES(null, 'suspenso'), (null, 'accion'), (null, 'romance')";
     private static final String TABLA_LIBRO = "CREATE TABLE Libro(id INTEGER primary key autoincrement, nombre TEXT,cantidad_paginas INTEGER, categoria_id_fk INTEGER, foreign key(categoria_id_fk) references Categoria(id))";
     private static final String INSERT_LIBRO = "INSERT INTO Libro VALUES(null, 'IT(eso)', 400, 1), (null, 'El prisionero de zenda', 300, 2), (null, 'Francisca yo te amo', 200, 3)";
-    private static final String TABLA_REGISTRO_RESERVA = "CREATE TABLE Registro_Reserva(id INTEGER primary key autoincrement,fecha_hora ,usuario_id_fk INTEGER, libro_id_fk INTEGER, categoria_id_fk INTEGER, foreign key(usuario_id_fk) REFERENCES Usuario(id),foreign key(libro_id_fk) REFERENCES Libro(id),foreign key(categoria_id_fk) REFERENCES Categoria(id))";
+    private static final String TABLA_REGISTRO_RESERVA = "CREATE TABLE Registro_Reserva(id INTEGER primary key autoincrement,fecha_hora TEXT ,usuario_id_fk INTEGER, libro_id_fk INTEGER, categoria_id_fk INTEGER, foreign key(usuario_id_fk) REFERENCES Usuario(id),foreign key(libro_id_fk) REFERENCES Libro(id),foreign key(categoria_id_fk) REFERENCES Categoria(id))";
 
     public AdminSQLiteOpenHelper(@Nullable Context context) {
         super(context, DATABASE_NOMBRE, null, DATABASE_VERSION);
@@ -54,6 +54,9 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
         db.execSQL(INSERT_LIBRO);
         //tabla historial de reservas
         db.execSQL(TABLA_REGISTRO_RESERVA);
+        /*db.execSQL("create view view_libro as SELECT * from Libro\n" +
+                "inner join Categoria\n" +
+                "on Libro.categoria_id_fk=Categoria.id");*/
 
     }
     //donde actualizo mi BD
@@ -148,7 +151,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
     public void insertLibro(Libro l){
         SQLiteDatabase bd = getReadableDatabase();
         if (bd !=null){
-            bd.execSQL("INSERT INTO Libro VALUES(NULL, '"+l.getNombre_l()+"', '"+l.getCant_Paginas()+"', '"+l.getCategoria_l());
+            bd.execSQL("INSERT INTO Libro VALUES(NULL, '"+l.getNombre_l()+"', "+l.getCant_Paginas()+", "+l.getCategoria_l()+");");
         }
         bd.close();
 

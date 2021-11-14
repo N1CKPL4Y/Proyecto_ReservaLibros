@@ -18,12 +18,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="147dp"
-            android:layout_height="59dp"
-            android:text="logo"
-            android:textSize="20sp" />
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/registro_libro" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView

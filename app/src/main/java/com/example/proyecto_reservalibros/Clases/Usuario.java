@@ -1,6 +1,8 @@
 package com.example.proyecto_reservalibros.Clases;
 
-public class Usuario {
+import java.io.Serializable;
+
+public class Usuario implements Serializable {
     private int ID;
     private String Nombre;
     private String Apellido;

@@ -53,15 +53,13 @@ public class MainActivity extends AppCompatActivity {
                         System.out.println(""+user.getTipo_user());
                         id_user = user.getTipo_user();
                         Intent i = new Intent(getApplicationContext(), menu_admi_act.class);
-                        i.putExtra("tipo", id_user);
-                        i.putExtra("nombre", user.getNombre());
+                        i.putExtra("usuario", user);
                         startActivity(i);
                     }else if(user.getTipo_user()==2){
                         System.out.println(""+user.getTipo_user());
                         id_user = user.getTipo_user();
                         Intent i = new Intent(getApplicationContext(), menu_principal_act.class);
-                        i.putExtra("usuario", id_user);
-                        i.putExtra("nombre", user.getNombre());
+                        i.putExtra("usuario", user);
                         startActivity(i);
                         System.out.println(id_user);
                     }

@@ -9,10 +9,13 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import com.example.proyecto_reservalibros.Clases.Usuario;
+
 public class menu_principal_act extends AppCompatActivity {
     private TextView txtclientelog;
     private VideoView video;
-
+    private Bundle b;
+    private Usuario usuario;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,10 +25,9 @@ public class menu_principal_act extends AppCompatActivity {
 
         video.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.video));
         video.start();
-        Intent i = getIntent();
-        String nombre = i.getStringExtra("nombre");
-        int id = getIntent().getIntExtra("tipo",1);
-        txtclientelog.setText(nombre);
+        b = getIntent().getExtras();
+        usuario = (Usuario) b.getSerializable("usuario");
+        txtclientelog.setText(usuario.getNombre());
     }
 
     public void logout(View view){
@@ -40,6 +42,7 @@ public class menu_principal_act extends AppCompatActivity {
 
     public void realizar_reserva(View view){
         Intent i = new Intent(this, realizar_reserva_act.class);
+        i.putExtra("usuario", usuario);
         startActivity(i);
     }
 

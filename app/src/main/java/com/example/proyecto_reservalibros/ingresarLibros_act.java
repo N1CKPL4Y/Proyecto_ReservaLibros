@@ -16,6 +16,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.proyecto_reservalibros.Clases.Categoria;
+import com.example.proyecto_reservalibros.Clases.Libro;
 import com.example.proyecto_reservalibros.DataBase.AdminSQLiteOpenHelper;
 
 import java.util.ArrayList;
@@ -48,19 +49,22 @@ public class ingresarLibros_act extends AppCompatActivity {
         ArrayAdapter<CharSequence> adaptador = new ArrayAdapter(this, android.R.layout.simple_spinner_item,listaCategoria);
         spn_catg.setAdapter(adaptador);
 
-        init();
+        Agregar();
 
     }
 
-    public void init(){
+    public void Agregar(){
         btn_agregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String nombre;
-                int c_paginas, categoria;
+                int id_categoria, cant_paginas;
+                id_categoria = spn_catg.getSelectedItemPosition();
                 nombre = text_nombreLibro.getText().toString();
-                c_paginas = Integer.parseInt(text_cantPaginas.getText().toString());
-                categoria = spn_catg.getSelectedItemPosition();
+                cant_paginas = Integer.parseInt(text_cantPaginas.getText().toString());
+                Libro libro = new Libro(0, nombre, cant_paginas, id_categoria);
+                System.out.println(" "+nombre+" "+cant_paginas+" "+id_categoria);
+                d.insertLibro(libro);
 
             }
         });
