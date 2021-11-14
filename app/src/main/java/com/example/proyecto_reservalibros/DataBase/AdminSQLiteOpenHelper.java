@@ -7,7 +7,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import com.example.proyecto_reservalibros.Clases.Categoria;
+import com.example.proyecto_reservalibros.Clases.Libro;
 import com.example.proyecto_reservalibros.Clases.Usuario;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
 
@@ -57,6 +62,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
 
     }
 
+    //consulta para saber si el usuario existe dentro de la bd
     public Usuario getUser(String nombre_u, String pass_u){
         Usuario user = null;
        SQLiteDatabase bd = getReadableDatabase();
@@ -72,6 +78,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
        return user;
     }
 
+    //insertamos un usuario nuevo
     public void insertUser(Usuario user){
         SQLiteDatabase bd = getReadableDatabase();
         if (bd != null){
@@ -79,4 +86,51 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
         }
         bd.close();
     }
+
+    //insertamos una categoria nueva
+    public void insertCategoria(Categoria cat){
+        SQLiteDatabase bd = getReadableDatabase();
+        if (bd !=null){
+            bd.execSQL("INSERT INTO Categoria VALUES(NULL, '"+cat.getNombre_c());
+        }
+        bd.close();
+    }
+
+    //obtenemos lista de los libros existentes
+    public ArrayList<Libro> getLibros(){
+        SQLiteDatabase bd = getReadableDatabase();
+        Cursor cur = bd.rawQuery("SELECT * FROM Libro", null);
+        ArrayList<Libro> listalib = new ArrayList<Libro>();
+
+        while(cur.moveToNext()){
+            Libro l = new Libro();
+            l.setID(cur.getInt(0));
+            l.setNombre_l(cur.getString(1));
+            l.setCant_Paginas(cur.getInt(2));
+            l.setCategoria_l(cur.getInt(3));
+            listalib.add(l);
+        }
+        bd.close();
+        return listalib;
+    }
+
+    //buscamos un libro en especifico
+    public Libro getLibro(String nombre){
+        Libro l = null;
+        SQLiteDatabase bd = getReadableDatabase();
+        Cursor cur = bd.rawQuery("SELECT * FROM Libro WHERE nombre = '"+nombre, null);
+        if (cur.moveToFirst()){
+            l = new Libro();
+            l.setID(cur.getInt(0));
+            l.setNombre_l(cur.getString(1));
+            l.setCant_Paginas(cur.getInt(2));
+            l.setCategoria_l(cur.getInt(3));
+        }
+        return l;
+    }
+
+    //buscamos todas las categorias existentes
+
+
+
 }

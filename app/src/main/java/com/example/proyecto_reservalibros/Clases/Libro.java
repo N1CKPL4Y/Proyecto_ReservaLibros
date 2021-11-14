@@ -47,4 +47,9 @@ public class Libro {
     public void setCategoria_l(int categoria_l) {
         this.categoria_l = categoria_l;
     }
+
+    @Override
+    public String toString(){
+        return Nombre_l+"   "+Cant_Paginas;
+    }
 }
